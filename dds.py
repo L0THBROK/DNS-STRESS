@@ -19,7 +19,7 @@ repos = {
 
 def welcome_message():
     print(colored("==========================================", 'cyan', attrs=['bold']))
-    print(colored("Welcome by Lothbrok9!", 'green', attrs=['bold']))
+    print(colored("Welcome by L0THBROK!", 'green', attrs=['bold']))
     print(colored("==========================================", 'cyan', attrs=['bold']))
     time.sleep(1)
 
