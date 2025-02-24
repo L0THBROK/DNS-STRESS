@@ -57,13 +57,6 @@ To begin using DNS-STRESS, you need to install the necessary dependencies and se
 
 After installation, you can start using DNS-STRESS to stress test DNS servers. Below are the available command-line arguments and examples of how to use them.
 
-### Basic Command
-
-To run a basic DNS stress test, use the following command:
-```bash
-python dns_stress.py --target <DNS_SERVER_IP> --queries <NUMBER_OF_QUERIES>
-```
-
 ### Command-Line Arguments
 - `--target <DNS_SERVER_IP>`: The IP address of the DNS server you want to test.
 - `--queries <NUMBER_OF_QUERIES>`: The number of DNS queries you want to send during the stress test.
@@ -72,20 +65,11 @@ python dns_stress.py --target <DNS_SERVER_IP> --queries <NUMBER_OF_QUERIES>
 - `--rate <RATE>`: The rate at which queries are sent, measured in queries per second. Default is 1.
 - `--timeout <TIMEOUT>`: The timeout period in seconds for each query. Default is 5 seconds.
 
-### Example Usage
-
-#### Simple Stress Test
-Stress test Google’s DNS server (8.8.8.8) with 1000 queries using the default settings (UDP protocol, A record query):
-```bash
-python dns_stress.py --target 8.8.8.8 --queries 1000
-```
-
 #### Advanced Stress Test
 Send 10,000 DNS queries to the target DNS server (8.8.8.8) with MX record queries using TCP protocol, at a rate of 100 queries per second:
 ```bash
 python dns_stress.py --target 8.8.8.8 --queries 10000 --protocol TCP --query-type MX --rate 100 --timeout 10
 ```
-
 ### Performance Metrics
 
 During the test, DNS-STRESS will output the following performance metrics:
